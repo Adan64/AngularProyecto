@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+    <span>{{title}}</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<mat-drawer-container class="example-container">
+    <mat-drawer mode="side" opened>
+
+        <mat-selection-list #shoes [multiple]="false">
+            <mat-list-option [routerLink]="'page1'">usuarios</mat-list-option>
+            <mat-list-option [routerLink]="'p2'">Ciudad</mat-list-option>
+        </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+    <app-insertar-usuaro></app-insertar-usuaro>
+</mat-drawer-container>

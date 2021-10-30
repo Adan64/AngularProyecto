@@ -1,0 +1,15 @@
+.card {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 20px;
+    width: 350px;
+    height: auto;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-button {
+    justify-content: right;
+}

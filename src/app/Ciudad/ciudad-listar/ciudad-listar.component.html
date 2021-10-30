@@ -1,0 +1,48 @@
+<mat-card style="max-width:1200px; width: 700px; ">
+
+
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Buscar..</mat-label>
+        <input matInput placeholder="Buscar ciudad por descripcion" [(ngModel)]="textobuscar" (keyup)="KeyUp()">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+        <!-- Codigo Column -->
+        <ng-container matColumnDef="Codigo">
+            <th mat-header-cell *matHeaderCellDef> Codigo </th>
+            <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+        </ng-container>
+
+        <!-- Descripcion Column -->
+        <ng-container matColumnDef="Descripcion">
+            <th mat-header-cell *matHeaderCellDef> Descripcion </th>
+            <td mat-cell *matCellDef="let element"> {{element.descripcion}} </td>
+        </ng-container>
+        <ng-container matColumnDef="N/M">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button aria-label="Example icon-button with a heart icon" routerLink="/p3/{{element.codigo}}">
+                <mat-icon  >edit</mat-icon>
+              </button>
+            </td>
+        </ng-container>
+
+        <ng-container matColumnDef="E">
+            <th mat-header-cell *matHeaderCellDef> </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button aria-label="Example icon-button with a heart icon" (click)="Eliminar(element.codigo)">
+                  <mat-icon>delete</mat-icon>
+            </button>
+            </td>
+        </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+    <mat-paginator [pageSizeOptions]="[5,10,20,30,40,50]" showFirstLastButtons>
+    </mat-paginator>
+    <button mat-raised-button class="btnnuevo" color="primary" routerLink="/p3/0">Nueva ciudad</button>
+</mat-card>

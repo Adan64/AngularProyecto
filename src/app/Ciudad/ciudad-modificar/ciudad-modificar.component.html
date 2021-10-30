@@ -1,0 +1,19 @@
+<mat-card class="card">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Codigo</mat-label>
+        <input matInput placeholder="Codigo de la cidudad" [(ngModel)]="ciudad.codigo" readonly="true">
+    </mat-form-field>
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Ciudad</mat-label>
+        <input matInput placeholder="Nombre de la cidudad" [(ngModel)]="ciudad.descripcion" readonly="false">
+    </mat-form-field>
+    <div>
+
+        <button mat-fab color="warn" class="example-button" routerLink="/p2">
+    <mat-icon >chevron_left</mat-icon>
+  </button>
+        <button mat-fab color="primary" class="example-button" (click)="Guardar(ciudad)">
+      <mat-icon >done</mat-icon>
+    </button>
+    </div>
+</mat-card>

@@ -1,0 +1,15 @@
+<mat-grid-list cols="7" rowHeight="300px" style="background-color: white;">
+
+    <mat-grid-tile *ngFor="let usuario of usuarios" style="background-color: white; margin: 5px;">
+        <mat-card class="example-card">
+            <mat-card-actions>Codigo : {{usuario.codigo}}</mat-card-actions>
+            <mat-card-actions>Nombre de usuario : {{usuario.username}}</mat-card-actions>
+            <mat-card-actions>Contraseña: {{usuario.password}}</mat-card-actions>
+            <mat-divider inset></mat-divider>
+            <mat-card-actions>
+                <button mat-stroked-button color="warn">Eliminar</button>
+                <button mat-stroked-button color="primary">Modificar</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>
