@@ -1,23 +1,22 @@
 <mat-card class="card">
     <mat-form-field class="example-full-width" appearance="fill">
         <mat-label>Codigo</mat-label>
-        <input matInput placeholder="Codigo del cliente" [(ngModel)]="Usuario.codigo" readonly="true">
+        <input matInput placeholder="Codigo" [(ngModel)]="Autor.codigo" readonly="true">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Nombre de usuario</mat-label>
-        <input matInput placeholder="Nombre de usuario" [(ngModel)]="Usuario.username" readonly="false">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="Nombre del autor" [(ngModel)]="Autor.nombre" readonly="false">
     </mat-form-field>
     <mat-form-field class="example-full-width" appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput placeholder="Nombre de la cidudad" [(ngModel)]="Usuario.password" readonly="false">
+        <mat-label>Foto</mat-label>
+        <input matInput placeholder="Foto" [(ngModel)]="Autor.foto" readonly="false">
     </mat-form-field>
     <div>
 
         <button mat-fab color="warn" class="example-button" routerLink="/C">
-  <mat-icon >chevron_left</mat-icon>
+<mat-icon >chevron_left</mat-icon>
 </button>
         <button mat-fab color="primary" class="example-button" (click)="Guardar()">
-    <mat-icon >done</mat-icon>
-  </button>
+  <mat-icon >done</mat-icon>
+</button>
     </div>
-</mat-card>

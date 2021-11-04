@@ -1,18 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { InsertarUsuaroComponent } from './insertar-usuaro.component';
-describe('InsertarUsuaroComponent', () => {
-  let component: InsertarUsuaroComponent;
-  let fixture: ComponentFixture<InsertarUsuaroComponent>;
+
+import { Dialogo12Component } from './dialogo12.component';
+
+describe('Dialogo12Component', () => {
+  let component: Dialogo12Component;
+  let fixture: ComponentFixture<Dialogo12Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ InsertarUsuaroComponent ]
+      declarations: [ Dialogo12Component ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(InsertarUsuaroComponent);
+    fixture = TestBed.createComponent(Dialogo12Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

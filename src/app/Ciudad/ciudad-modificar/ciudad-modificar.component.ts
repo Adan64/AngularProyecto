@@ -72,7 +72,6 @@ export class CiudadModificarComponent implements OnInit {
       {
 
       this.ciudad.codigo= parms.codigo;
-
         if (this.IdValido())
         {this.Mostrar()};
       }

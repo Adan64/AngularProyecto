@@ -1,3 +1,4 @@
+import { Usuario } from './../../Usuario/Usuario';
 import { Ciudad } from './../Ciudad';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import axios from 'axios';
@@ -15,9 +16,7 @@ import { DialogComponent } from 'src/app/dialog/dialog.component';
 export class CiudadListarComponent implements OnInit {
   private error :string=""
   constructor(
-    private router:Router,
-    private dialog:MatDialog
-
+    private router:Router
   ) { }
   textobuscar=""
   displayedColumns :string[]=['Codigo','Descripcion','N/M','E'];

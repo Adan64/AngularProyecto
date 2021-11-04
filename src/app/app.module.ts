@@ -25,6 +25,9 @@ import { FormsModule } from '@angular/forms';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatDialogModule} from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
+import { Dialogo12Component } from './dialog/dialogo12/dialogo12.component';
+import { ListarAutorComponent } from './Autor/listar-autor/listar-autor.component';
+import { ModificarAutorComponent } from './Autor/modificar-autor/modificar-autor.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +41,10 @@ import { DialogComponent } from './dialog/dialog.component';
      InsertarUsuaroComponent,
      CiudadListarComponent,
      CiudadModificarComponent,
-     DialogComponent
+     DialogComponent,
+     Dialogo12Component,
+     ListarAutorComponent,
+     ModificarAutorComponent
   ],
   imports: [
     BrowserAnimationsModule,

@@ -6,11 +6,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import axios from 'axios';
 
 @Component({
-  selector: 'app-listar-usuario',
-  templateUrl: './listar-usuario.component.html',
-  styleUrls: ['./listar-usuario.component.css']
+  selector: 'app-listar-autor',
+  templateUrl: './listar-autor.component.html',
+  styleUrls: ['./listar-autor.component.css']
 })
-export class ListarUsuarioComponent implements OnInit {
+export class ListarAutorComponent implements OnInit {
 
 
   constructor(private router: Router) { }
@@ -22,7 +22,7 @@ export class ListarUsuarioComponent implements OnInit {
   Eliminar(codigo:HtmlParser)
   {
     let resp:any
-    axios.delete("http://127.0.0.1:8080/PROYECTO-REST/rest/usuario/delete/"+codigo).
+    axios.delete("http://127.0.0.1:8080/PROYECTO-REST/rest/autor/delete/"+codigo).
     then(res=> {
       console.log(res.data)
       this.MostrarError(res.data)
@@ -37,7 +37,7 @@ export class ListarUsuarioComponent implements OnInit {
   }
   Mostrar()
   {
-    axios.get("http://127.0.0.1:8080/PROYECTO-REST/rest/usuario/list").then(resultado=>{
+    axios.get("http://127.0.0.1:8080/PROYECTO-REST/rest/autor/list").then(resultado=>{
     console.log(resultado.data)
     this.dataSource=new MatTableDataSource((<any>resultado.data).Resulta);
     this.dataSource.paginator=this.paginator;
@@ -46,10 +46,12 @@ export class ListarUsuarioComponent implements OnInit {
   }
   dataSource :any;
   @ViewChild(MatPaginator) paginator: MatPaginator | undefined;
-   displayedColumns :string[]=['Codigo','U','P','N/M','E'];
+   displayedColumns :string[]=['Codigo','U','F','N/M','E'];
     usuarios:any;
   ngOnInit(): void {
     this.Mostrar();
   }
 
 }
+
+
